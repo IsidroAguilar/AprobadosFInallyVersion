@@ -118,31 +118,52 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="1402347449_floppy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1402347449_floppy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1402349225_Plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1402349225_Plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1402347104_button-add_basic_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1402347104_button-add_basic_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1402347143_remove-sign" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1402347143_remove-sign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PersonajeAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PersonajeAzul.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1402398252_MB__home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1402398252_MB__home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1402347449_floppy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1402347449_floppy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1402347143_remove-sign" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1402347143_remove-sign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1402347104_button-add_basic_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1402347104_button-add_basic_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1402400330_play" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1402400330_play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PersonajeNaranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PersonajeNaranja.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PersonajeVerde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PersonajeVerde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PersonajeRojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PersonajeRojo.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PersonajeGris" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PersonajeGris.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1402400189_edit-find-replace" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1402400189_edit-find-replace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1402400159_configuration-settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1402400159_configuration-settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PersonajeMorado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PersonajeMorado.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1402349225_Plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1402349225_Plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1402400082_configuration" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1402400082_configuration.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1402400330_play" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1402400330_play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1402400159_configuration-settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1402400159_configuration-settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dce4Kprck" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dce4Kprck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

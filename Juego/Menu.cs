@@ -35,7 +35,14 @@ namespace Juego
         {
             PlanearJuego v = new PlanearJuego();
             v.Show();
-            this.Hide();
+            Hide();
+        }
+
+        private void btnJugar_Click(object sender, EventArgs e)
+        {
+            frmJugadores v = new frmJugadores();
+            v.Show();
+            Hide();
         }
     }
 }
