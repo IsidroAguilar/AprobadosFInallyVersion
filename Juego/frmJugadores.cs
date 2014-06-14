@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Juego.BD;
 using Juego.LALO;
 
 namespace Juego
 {
     public partial class frmJugadores : Form
     {
+        SELECT preguntas = new SELECT();
         clsJugadores jugador = new clsJugadores();
         private string path;
         private int contador = 0;
@@ -61,6 +63,7 @@ namespace Juego
                     break;
                 case "Jugador 6":
                     jugador.RegistrarJugador(contador, path);
+                    preguntas.GenerarListaPreguntas();
                     this.Hide();
                     juego.Show();
                     break;

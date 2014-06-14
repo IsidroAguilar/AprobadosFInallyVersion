@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Juego.BD;
 
 namespace Juego
 {
     public partial class Menu : Form
     {
+        SELECT id = new SELECT();
         public Menu()
         {
             InitializeComponent();
@@ -40,6 +42,7 @@ namespace Juego
 
         private void btnJugar_Click(object sender, EventArgs e)
         {
+            id.ExtraerID();
             frmJugadores v = new frmJugadores();
             v.Show();
             Hide();

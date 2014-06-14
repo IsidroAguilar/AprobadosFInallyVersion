@@ -10,7 +10,8 @@ namespace Juego.BD
     class SELECT
     {
         OleDbConnection conexion = new OleDbConnection();
-      
+        static public List<int> IDs { get; set; }
+        private static List<string> listaDePreguntas = new List<string>();
 
         public SELECT()
         {
@@ -64,7 +65,7 @@ namespace Juego.BD
             int id=0;
             try
             {
-                string q = "SELECT*FROM PREGUNTAS";
+                string q = "SELECT*FROM PREGUNTAS WHERE ";
                 comand.CommandText = q;
                 conexion.Open();
                 read = comand.ExecuteReader();
@@ -97,7 +98,67 @@ namespace Juego.BD
             }
 
         }
-  
-       
+        #region Métodos Lalo
+        public void ExtraerID()
+        {
+            IDs = new List<int>();
+            OleDbCommand comand = new OleDbCommand();
+            OleDbDataReader read;
+            comand.Connection = conexion;
+            try
+            {
+                string q = "SELECT*FROM CUESTIONARIO WHERE Status=1";
+                comand.CommandText = q;
+                conexion.Open();
+                read = comand.ExecuteReader();
+                if (read.HasRows)
+                {
+                    while (read.Read())
+                    {
+                        IDs.Add(int.Parse(read[0].ToString()));
+                    }
+                }
+                read.Close();
+                conexion.Close();
+            }
+            catch (OleDbException)
+            {
+                conexion.Close();
+            }
+
+        }
+
+        public void GenerarListaPreguntas()
+        {
+
+            IDs = new List<int>();
+            OleDbCommand comand = new OleDbCommand();
+            OleDbDataReader read;
+            comand.Connection = conexion;
+            try
+            {
+                string q = "SELECT * FROM CUESTIONARIO WHERE Status=1";
+                comand.CommandText = q;
+                conexion.Open();
+                read = comand.ExecuteReader();
+                if (read.HasRows)
+                {
+                    while (read.Read())
+                    {
+                        IDs.Add(int.Parse(read[0].ToString()));
+                    }
+                }
+                read.Close();
+                conexion.Close();
+            }
+            catch (OleDbException)
+            {
+                conexion.Close();
+            }
+        }
+
+        #endregion
+
+
     }
 }
