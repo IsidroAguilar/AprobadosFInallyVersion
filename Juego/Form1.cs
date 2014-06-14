@@ -16,5 +16,12 @@ namespace Juego
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmJuego v = new frmJuego();
+            this.Hide();
+            v.Show();
+        }
     }
 }
