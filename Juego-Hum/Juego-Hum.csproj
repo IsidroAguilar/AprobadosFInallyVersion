@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{004E18B8-968A-4A91-911A-64D4B920BDAA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Juego_Hum</RootNamespace>
+    <AssemblyName>Juego-Hum</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BD\DELETE.cs" />
+    <Compile Include="BD\INSERT.cs" />
+    <Compile Include="BD\SELECT.cs" />
+    <Compile Include="BD\UPDATE.cs" />
+    <Compile Include="Cuestionario.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfigurar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfigurar.Designer.cs">
+      <DependentUpon>frmConfigurar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInformación.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInformación.Designer.cs">
+      <DependentUpon>frmInformación.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPreparar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPreparar.Designer.cs">
+      <DependentUpon>frmPreparar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Juego\Chabelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Juego\Chabelo.Designer.cs">
+      <DependentUpon>Chabelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Juego\clsEquipos.cs" />
+    <Compile Include="Juego\clsJugadores.cs" />
+    <Compile Include="Juego\clsTurno.cs" />
+    <Compile Include="Juego\Equipo.cs" />
+    <Compile Include="Juego\frmJuego.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Juego\frmJuego.Designer.cs">
+      <DependentUpon>frmJuego.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Juego\frmPuntaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Juego\frmPuntaje.Designer.cs">
+      <DependentUpon>frmPuntaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Juego\PreguntasJuego.cs" />
+    <Compile Include="Juego\Teams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Juego\Teams.Designer.cs">
+      <DependentUpon>Teams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Preguntas.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfigurar.resx">
+      <DependentUpon>frmConfigurar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInformación.resx">
+      <DependentUpon>frmInformación.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPreparar.resx">
+      <DependentUpon>frmPreparar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Juego\Chabelo.resx">
+      <DependentUpon>Chabelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Juego\frmJuego.resx">
+      <DependentUpon>frmJuego.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Juego\frmPuntaje.resx">
+      <DependentUpon>frmPuntaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Juego\Teams.resx">
+      <DependentUpon>Teams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1402804866_settings01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1402804871_settings02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1402804895_joypad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1402796595_home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1402802182_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1402802127_f-cross_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1402347449_floppy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1402796165_Log Out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1402806568_Information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1402806750_about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1402806904_question_sticker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1402807023_question-balloon_sticker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gamer-wallpaper---gamer-wallpaper-hd---deviantart-more-like-nes-6gbwbz16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frmPreguntasAzul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frmPreguntasGris.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frmPreguntasMorado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frmPreguntasNaranja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frmPreguntasRojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frmPreguntasVerde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PersonajeAzul.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PersonajeGris.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PersonajeMorado.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PersonajeNaranja.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PersonajeRojo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PersonajeVerde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1402860914_exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6cf5f-escenarios.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1402877492_people-y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1402877560_phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1402877624_support-px-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chabelo.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
