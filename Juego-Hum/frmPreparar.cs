@@ -83,5 +83,15 @@ namespace Juego_Hum
             else
                 MessageBox.Show("No se puede cambiar el estado");
         }
+
+        private void Menu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void btnInformación_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("En esta ventana se agregan los cuestionarios, con los cuales los alumnos jugaran en las rondas de juego");
+        }
     }
 }

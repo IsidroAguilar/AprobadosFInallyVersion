@@ -50,6 +50,12 @@
     <Compile Include="BD\SELECT.cs" />
     <Compile Include="BD\UPDATE.cs" />
     <Compile Include="Cuestionario.cs" />
+    <Compile Include="frmCataPrimer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCataPrimer.Designer.cs">
+      <DependentUpon>frmCataPrimer.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmConfigurar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,12 @@
     </Compile>
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPremios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPremios.Designer.cs">
+      <DependentUpon>frmPremios.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPreparar.cs">
       <SubType>Form</SubType>
@@ -106,6 +118,9 @@
     <Compile Include="Preguntas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCataPrimer.resx">
+      <DependentUpon>frmCataPrimer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmConfigurar.resx">
       <DependentUpon>frmConfigurar.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPremios.resx">
+      <DependentUpon>frmPremios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPreparar.resx">
       <DependentUpon>frmPreparar.cs</DependentUpon>
@@ -245,6 +263,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Chabelo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\incognita.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

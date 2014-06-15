@@ -29,11 +29,8 @@
         private void InitializeComponent()
         {
             this.Menu = new System.Windows.Forms.ToolStrip();
-            this.btnHome = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnSalir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnInformación = new System.Windows.Forms.ToolStripButton();
             this.dtgInactivo = new System.Windows.Forms.DataGridView();
             this.Cuestionario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtgActivo = new System.Windows.Forms.DataGridView();
@@ -41,6 +38,9 @@
             this.btnActivar = new System.Windows.Forms.Button();
             this.btnInactivar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnHome = new System.Windows.Forms.ToolStripButton();
+            this.btnSalir = new System.Windows.Forms.ToolStripButton();
+            this.btnInformación = new System.Windows.Forms.ToolStripButton();
             this.Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgInactivo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgActivo)).BeginInit();
@@ -61,54 +61,17 @@
             this.Menu.Size = new System.Drawing.Size(662, 47);
             this.Menu.TabIndex = 1;
             this.Menu.Text = "toolStrip1";
-            // 
-            // btnHome
-            // 
-            this.btnHome.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnHome.Image = global::Juego_Hum.Properties.Resources._1402796595_home;
-            this.btnHome.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnHome.Size = new System.Drawing.Size(64, 44);
-            this.btnHome.Tag = "";
-            this.btnHome.Text = "toolStripButton1";
-            this.btnHome.ToolTipText = "Menú";
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.Menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.Menu_ItemClicked);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 47);
             // 
-            // btnSalir
-            // 
-            this.btnSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnSalir.Image = global::Juego_Hum.Properties.Resources._1402796165_Log_Out;
-            this.btnSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnSalir.Size = new System.Drawing.Size(64, 44);
-            this.btnSalir.Tag = "";
-            this.btnSalir.Text = "toolStripButton5";
-            this.btnSalir.ToolTipText = "Salir";
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 47);
-            // 
-            // btnInformación
-            // 
-            this.btnInformación.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnInformación.Image = global::Juego_Hum.Properties.Resources._1402807023_question_balloon_sticker;
-            this.btnInformación.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnInformación.Name = "btnInformación";
-            this.btnInformación.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnInformación.Size = new System.Drawing.Size(64, 44);
-            this.btnInformación.Tag = "";
-            this.btnInformación.Text = "toolStripButton1";
-            this.btnInformación.ToolTipText = "Información";
             // 
             // dtgInactivo
             // 
@@ -185,6 +148,45 @@
             this.label1.Size = new System.Drawing.Size(134, 32);
             this.label1.TabIndex = 6;
             this.label1.Text = "En Juego";
+            // 
+            // btnHome
+            // 
+            this.btnHome.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnHome.Image = global::Juego_Hum.Properties.Resources._1402796595_home;
+            this.btnHome.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnHome.Size = new System.Drawing.Size(64, 44);
+            this.btnHome.Tag = "";
+            this.btnHome.Text = "toolStripButton1";
+            this.btnHome.ToolTipText = "Menú";
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnSalir.Image = global::Juego_Hum.Properties.Resources._1402796165_Log_Out;
+            this.btnSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnSalir.Size = new System.Drawing.Size(64, 44);
+            this.btnSalir.Tag = "";
+            this.btnSalir.Text = "toolStripButton5";
+            this.btnSalir.ToolTipText = "Salir";
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnInformación
+            // 
+            this.btnInformación.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnInformación.Image = global::Juego_Hum.Properties.Resources._1402807023_question_balloon_sticker;
+            this.btnInformación.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnInformación.Name = "btnInformación";
+            this.btnInformación.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnInformación.Size = new System.Drawing.Size(64, 44);
+            this.btnInformación.Tag = "";
+            this.btnInformación.Text = "toolStripButton1";
+            this.btnInformación.ToolTipText = "Información";
+            this.btnInformación.Click += new System.EventHandler(this.btnInformación_Click);
             // 
             // frmPreparar
             // 
