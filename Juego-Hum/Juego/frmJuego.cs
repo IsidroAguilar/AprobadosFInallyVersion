@@ -18,6 +18,7 @@ namespace Juego_Hum.Juego
         public frmJuego()
         {
             InitializeComponent();
+            
         }
 
         private List<int> respuestas = new List<int>();
