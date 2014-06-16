@@ -36,9 +36,6 @@ namespace Juego_Hum.Juego
                         equipo = x,
                         fondo = fondo,
                         puntaje = 0,
-                        comodin1=true,
-                        comodin2=true,
-                        comodin3=true
                     };
                     equipos.Insertar(equipo);
                     lblJugadores.Text = "Jugador 2";
@@ -50,9 +47,6 @@ namespace Juego_Hum.Juego
                         equipo = x,
                         fondo = fondo,
                         puntaje = 0,
-                        comodin1 = true,
-                        comodin2 = true,
-                        comodin3 = true
                     };
                     equipos.Insertar(equipo);
                     lblJugadores.Text = "Jugador 3";
@@ -64,9 +58,8 @@ namespace Juego_Hum.Juego
                         equipo = x,
                         fondo = fondo,
                         puntaje = 0,
-                        comodin1 = true,
-                        comodin2 = true,
-                        comodin3 = true
+                       
+
                     };
                     equipos.Insertar(equipo);
                     lblJugadores.Text = "Jugador 4";
@@ -78,9 +71,7 @@ namespace Juego_Hum.Juego
                         equipo = x,
                         fondo = fondo,
                         puntaje = 0,
-                        comodin1 = true,
-                        comodin2 = true,
-                        comodin3 = true
+                     
                     };
                     equipos.Insertar(equipo);
                     lblJugadores.Text = "Jugador 5";
@@ -92,9 +83,7 @@ namespace Juego_Hum.Juego
                         equipo = x,
                         fondo = fondo,
                         puntaje = 0,
-                        comodin1 = true,
-                        comodin2 = true,
-                        comodin3 = true
+               
                     };
                    equipos.Insertar(equipo);
                     lblJugadores.Text = "Jugador 6";
@@ -107,9 +96,7 @@ namespace Juego_Hum.Juego
                         equipo = x,
                         fondo = fondo,
                         puntaje = 0,
-                        comodin1 = true,
-                        comodin2 = true,
-                        comodin3 = true
+                     
                     };
                     equipos.Insertar(equipo);
                     ventana.Show();

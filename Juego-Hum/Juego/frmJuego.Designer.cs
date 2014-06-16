@@ -35,17 +35,10 @@
             this.btnR3 = new System.Windows.Forms.Button();
             this.btnR2 = new System.Windows.Forms.Button();
             this.btnR1 = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pctcmd3 = new System.Windows.Forms.PictureBox();
-            this.pctcmd2 = new System.Windows.Forms.PictureBox();
-            this.pctcmd1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPregunta = new System.Windows.Forms.TextBox();
+            this.btnContinuar = new System.Windows.Forms.Button();
             this.Menu.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctcmd3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctcmd2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctcmd1)).BeginInit();
             this.SuspendLayout();
             // 
             // Menu
@@ -90,7 +83,7 @@
             // 
             // btnR4
             // 
-            this.btnR4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnR4.BackColor = System.Drawing.Color.Black;
             this.btnR4.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnR4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnR4.ForeColor = System.Drawing.Color.White;
@@ -100,10 +93,11 @@
             this.btnR4.TabIndex = 3;
             this.btnR4.Text = "Respuesta4";
             this.btnR4.UseVisualStyleBackColor = false;
+            this.btnR4.Click += new System.EventHandler(this.btnR4_Click);
             // 
             // btnR3
             // 
-            this.btnR3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnR3.BackColor = System.Drawing.Color.Black;
             this.btnR3.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnR3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnR3.ForeColor = System.Drawing.Color.White;
@@ -113,10 +107,11 @@
             this.btnR3.TabIndex = 2;
             this.btnR3.Text = "Respuesta3";
             this.btnR3.UseVisualStyleBackColor = false;
+            this.btnR3.Click += new System.EventHandler(this.btnR3_Click);
             // 
             // btnR2
             // 
-            this.btnR2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnR2.BackColor = System.Drawing.Color.Black;
             this.btnR2.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnR2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnR2.ForeColor = System.Drawing.Color.White;
@@ -126,10 +121,11 @@
             this.btnR2.TabIndex = 1;
             this.btnR2.Text = "Respuesta2";
             this.btnR2.UseVisualStyleBackColor = false;
+            this.btnR2.Click += new System.EventHandler(this.btnR2_Click);
             // 
             // btnR1
             // 
-            this.btnR1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnR1.BackColor = System.Drawing.Color.Black;
             this.btnR1.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnR1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnR1.ForeColor = System.Drawing.Color.White;
@@ -140,63 +136,31 @@
             this.btnR1.TabIndex = 0;
             this.btnR1.Text = "Respuesta 1";
             this.btnR1.UseVisualStyleBackColor = false;
+            this.btnR1.Click += new System.EventHandler(this.btnR1_Click);
             // 
-            // groupBox2
+            // txtPregunta
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.pctcmd3);
-            this.groupBox2.Controls.Add(this.pctcmd2);
-            this.groupBox2.Controls.Add(this.pctcmd1);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox2.Location = new System.Drawing.Point(0, 596);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(800, 128);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
+            this.txtPregunta.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtPregunta.Font = new System.Drawing.Font("Century Gothic", 33.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPregunta.Location = new System.Drawing.Point(0, 0);
+            this.txtPregunta.Multiline = true;
+            this.txtPregunta.Name = "txtPregunta";
+            this.txtPregunta.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtPregunta.Size = new System.Drawing.Size(800, 105);
+            this.txtPregunta.TabIndex = 17;
+            this.txtPregunta.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // pctcmd3
+            // btnContinuar
             // 
-            this.pctcmd3.BackgroundImage = global::Juego_Hum.Properties.Resources._1402877624_support_px_png;
-            this.pctcmd3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pctcmd3.Location = new System.Drawing.Point(671, 8);
-            this.pctcmd3.Name = "pctcmd3";
-            this.pctcmd3.Size = new System.Drawing.Size(123, 123);
-            this.pctcmd3.TabIndex = 2;
-            this.pctcmd3.TabStop = false;
-            this.pctcmd3.Click += new System.EventHandler(this.pctcmd3_Click);
-            // 
-            // pctcmd2
-            // 
-            this.pctcmd2.BackgroundImage = global::Juego_Hum.Properties.Resources._1402877560_phone;
-            this.pctcmd2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pctcmd2.Location = new System.Drawing.Point(363, 8);
-            this.pctcmd2.Name = "pctcmd2";
-            this.pctcmd2.Size = new System.Drawing.Size(123, 123);
-            this.pctcmd2.TabIndex = 1;
-            this.pctcmd2.TabStop = false;
-            this.pctcmd2.Click += new System.EventHandler(this.pctcmd2_Click);
-            // 
-            // pctcmd1
-            // 
-            this.pctcmd1.BackgroundImage = global::Juego_Hum.Properties.Resources._1402877492_people_y;
-            this.pctcmd1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pctcmd1.Location = new System.Drawing.Point(9, 8);
-            this.pctcmd1.Name = "pctcmd1";
-            this.pctcmd1.Size = new System.Drawing.Size(123, 123);
-            this.pctcmd1.TabIndex = 0;
-            this.pctcmd1.TabStop = false;
-            this.pctcmd1.Click += new System.EventHandler(this.pctcmd1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 33.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(800, 105);
-            this.textBox1.TabIndex = 17;
+            this.btnContinuar.Font = new System.Drawing.Font("Wingdings 3", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.btnContinuar.Location = new System.Drawing.Point(340, 511);
+            this.btnContinuar.Name = "btnContinuar";
+            this.btnContinuar.Size = new System.Drawing.Size(129, 89);
+            this.btnContinuar.TabIndex = 18;
+            this.btnContinuar.Text = "u";
+            this.btnContinuar.UseVisualStyleBackColor = true;
+            this.btnContinuar.Visible = false;
+            this.btnContinuar.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmJuego
             // 
@@ -205,8 +169,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 771);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnContinuar);
+            this.Controls.Add(this.txtPregunta);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -218,10 +182,6 @@
             this.Menu.ResumeLayout(false);
             this.Menu.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pctcmd3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctcmd2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctcmd1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,10 +196,7 @@
         private System.Windows.Forms.Button btnR3;
         private System.Windows.Forms.Button btnR2;
         private System.Windows.Forms.Button btnR1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.PictureBox pctcmd1;
-        private System.Windows.Forms.PictureBox pctcmd3;
-        private System.Windows.Forms.PictureBox pctcmd2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPregunta;
+        private System.Windows.Forms.Button btnContinuar;
     }
 }

@@ -38,7 +38,6 @@ C:\Users\Isidro\Source\Repos\AprobadosSecond\Juego-Hum\obj\Debug\Juego-Hum.pdb
 C:\Users\Isidro\Source\Repos\AprobadosSecond\Juego-Hum\bin\Debug\Juego-Hum.exe
 C:\Users\Isidro\Source\Repos\AprobadosSecond\Juego-Hum\bin\Debug\Juego-Hum.pdb
 C:\Users\Isidro\Source\Repos\AprobadosSecond\Juego-Hum\obj\Debug\Juego-Hum.csprojResolveAssemblyReference.cache
-C:\Users\Isidro\Source\Repos\AprobadosSecond\Juego-Hum\obj\Debug\Juego_Hum.frmCataPrimer.resources
 C:\Users\Isidro\Source\Repos\AprobadosSecond\Juego-Hum\obj\Debug\Juego_Hum.frmConfigurar.resources
 C:\Users\Isidro\Source\Repos\AprobadosSecond\Juego-Hum\obj\Debug\Juego_Hum.frmInformación.resources
 C:\Users\Isidro\Source\Repos\AprobadosSecond\Juego-Hum\obj\Debug\Juego_Hum.frmMenu.resources
@@ -50,3 +49,5 @@ C:\Users\Isidro\Source\Repos\AprobadosSecond\Juego-Hum\obj\Debug\Juego_Hum.Juego
 C:\Users\Isidro\Source\Repos\AprobadosSecond\Juego-Hum\obj\Debug\Juego_Hum.Properties.Resources.resources
 C:\Users\Isidro\Source\Repos\AprobadosSecond\Juego-Hum\obj\Debug\Juego-Hum.csproj.GenerateResource.Cache
 C:\Users\Isidro\Source\Repos\AprobadosSecond\Juego-Hum\obj\Debug\Juego_Hum.frmPremios.resources
+C:\Users\Isidro\Source\Repos\AprobadosSecond\Juego-Hum\obj\Debug\Juego_Hum.frmCatafixia.resources
+C:\Users\Isidro\Source\Repos\AprobadosSecond\Juego-Hum\obj\Debug\Juego_Hum.frmPrimerLugar.resources

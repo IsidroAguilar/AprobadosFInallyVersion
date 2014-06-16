@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
+using System.Threading;
 
 namespace Juego_Hum.Juego
 {
@@ -16,19 +19,26 @@ namespace Juego_Hum.Juego
         {
             InitializeComponent();
         }
-        List<Cuestionario> cuestionario = new List<Cuestionario>();
-        List<Preguntas> preguntas = new List<Preguntas>();
-        List<Cuestionario> cuestionarioJuego = new List<Cuestionario>();
-        List<PreguntasJuego> preguntasJuego = new List<PreguntasJuego>();
-        BD.SELECT select = new BD.SELECT();
-        int Turno = 0;
-        Stack<Equipo> equiposDatos = new Stack<Equipo>();
 
-        clsEquipos equipos = new clsEquipos();
-        Chabelo c = new Chabelo();
-        bool comodin = false;
-        #region
-        public void TablaCuestionario()
+        private List<int> respuestas = new List<int>();
+        private static List<int> ids = new List<int>();
+        private List<Cuestionario> cuestionario = new List<Cuestionario>();
+        private List<Preguntas> preguntas = new List<Preguntas>();
+        private List<Cuestionario> cuestionarioJuego = new List<Cuestionario>();
+        private List<PreguntasJuego> preguntasJuego = new List<PreguntasJuego>();
+        private BD.SELECT select = new BD.SELECT();
+        private int Turno = 0;
+        private Stack<Equipo> equiposDatos = new Stack<Equipo>();
+        private uint IdPregunta = 0;
+        private clsEquipos equipos = new clsEquipos();
+        private Chabelo c = new Chabelo();
+        private bool comodin = false;
+        private string correcta;
+        private int maximo;
+
+        #region "EXTRER PREGUNTAS"
+
+        public void Cuestionario()
         {
             cuestionario.Clear();
             cuestionarioJuego.Clear();
@@ -41,7 +51,8 @@ namespace Juego_Hum.Juego
                 }
             }
         }
-        public void TablaPreguntas()
+
+        public void Preguntas()
         {
             preguntas.Clear();
             preguntasJuego.Clear();
@@ -71,7 +82,9 @@ namespace Juego_Hum.Juego
                 }
             }
         }
+
         #endregion
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -79,84 +92,300 @@ namespace Juego_Hum.Juego
 
         private void frmJuego_Load(object sender, EventArgs e)
         {
+            Cuestionario();
+            Preguntas();
+            FormularPregunta();
             equiposDatos = equipos.Mostrar();
             Turno = clsTurno.Turno;
             string fondo = "";
-            bool cmd1=false, cmd2=false, cmd3=false;
             foreach (Equipo item in equiposDatos)
             {
                 if (item.equipo == Turno)
                 {
                     fondo = item.fondo;
-                    cmd1 = item.comodin1;
-                    cmd2 = item.comodin2;
-                    cmd3 = item.comodin3;
+
                 }
             }
-            if (cmd1 == false)
-                pctcmd1.Visible= false;
-            if (cmd2 == false)
-                pctcmd2.Visible = false;
-            if (cmd3 == false)
-                pctcmd3.Visible = false;
+
             BackgroundImage = Image.FromFile(fondo);
         }
 
-        private void pctcmd1_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (comodin == false)
-            {
-                foreach (Equipo item in equiposDatos)
-                {
-                    if (item.equipo == Turno)
-                    {
-                        item.comodin1 = false;
-                        break;
-                    }
-                }
-                pctcmd1.Visible = false;
-                comodin = true;
-            }
-            else 
-                c.Show();
+
         }
 
-        private void pctcmd2_Click(object sender, EventArgs e)
+        private void FormularPregunta()
         {
-            if (comodin == false)
+            int contador = 0;
+           maximo = preguntasJuego.Count() + 1;
+            
+            Random random = new Random();
+            int randomQuestion = random.Next(1, maximo);
+            
+            string[] respuesta = new string[5];
+            while (ids.Contains(randomQuestion))
             {
-                foreach (Equipo item in equiposDatos)
-                {
-                    if (item.equipo == Turno)
-                    {
-                        item.comodin2 = false;
-                        break;
-                    }
-                }
-                pctcmd2.Visible = false;
-                comodin = true;
+                randomQuestion = random.Next(1, maximo);
             }
-            else
-                c.Show();
+
+            ids.Add(randomQuestion);
+
+            foreach (PreguntasJuego preguntas in preguntasJuego)
+            {
+                if (preguntas.Id == randomQuestion)
+                {
+                    txtPregunta.Text = preguntas.Pregunta;
+                    IdPregunta = preguntas.Id;
+
+                    int randomAnswer = random.Next(0, 4);
+                    int z = 0;
+                    while (contador < 4)
+                    {
+                        while (respuestas.Contains(randomAnswer))
+                        {
+                            randomAnswer = random.Next(0, 4);
+                        }
+                        if (z == 0)
+                        {
+                            respuesta[randomAnswer] = preguntas.Respuesta;
+                            correcta = preguntas.Respuesta;
+                        }
+                        if (z == 1)
+                            respuesta[randomAnswer] = preguntas.Opcion2;
+                        if (z == 2)
+                            respuesta[randomAnswer] = preguntas.Opcion3;
+                        if (z == 3)
+                            respuesta[randomAnswer] = preguntas.Opcion4;
+                        z++;
+                        respuestas.Add(randomAnswer);
+                        contador++;
+
+                    }
+                    btnR1.Text = respuesta[0];
+                    btnR2.Text = respuesta[1];
+                    btnR3.Text = respuesta[2];
+                    btnR4.Text = respuesta[3];
+
+                }
+            }
+
+
+
+
+
         }
 
-        private void pctcmd3_Click(object sender, EventArgs e)
+        private bool Respuesta(string respuesta)
         {
-            if (comodin == false)
+
+            foreach (var item in preguntasJuego)
             {
-                foreach (Equipo item in equiposDatos)
-                {
-                    if (item.equipo == Turno)
+                if (item.Id == IdPregunta)
+                    if (item.Respuesta == respuesta)
                     {
-                        item.comodin3 = false;
+
+                        return true;
                         break;
                     }
+            }
+            return false;
+        }
+
+        private void Puntaje()
+        {
+            foreach (Equipo item in equiposDatos)
+            {
+                if (item.equipo == Turno)
+                {
+                    item.puntaje += 20;
                 }
-                pctcmd3.Visible = false;
-                comodin = true;
+            }
+
+        }
+
+
+        private void btnR1_Click(object sender, EventArgs e)
+        {
+            if (Respuesta(btnR1.Text))
+            {
+                btnR1.ForeColor = Color.Green;
+                btnR1.BackColor = Color.White;
+                Puntaje();
+
             }
             else
-                c.Show();
+            {
+                if (btnR2.Text == correcta)
+                {
+                    btnR2.ForeColor = Color.Green;
+                    btnR2.BackColor = Color.White;
+                }
+
+                if (btnR3.Text == correcta)
+                {
+                    btnR3.ForeColor = Color.Green;
+                    btnR3.BackColor = Color.White;
+                }
+
+                if (btnR4.Text == correcta)
+                {
+                    btnR4.ForeColor = Color.Green;
+                    btnR4.BackColor = Color.White;
+                }
+            }
+
+            if (clsTurno.Turno == 6)
+            {
+                clsTurno.Turno = 1;
+            }
+            else
+            {
+                clsTurno.Turno += 1;
+            }
+
+            btnContinuar.Visible = true;
+        }
+
+        private void btnR2_Click(object sender, EventArgs e)
+        {
+            if (Respuesta(btnR2.Text))
+            {
+                btnR2.ForeColor = Color.Green;
+                btnR2.BackColor = Color.White;
+                Puntaje();
+
+            }
+            else
+            {
+
+                if (btnR1.Text == correcta)
+                {
+                    btnR1.ForeColor = Color.Green;
+                    btnR1.BackColor = Color.White;
+                }
+
+                if (btnR3.Text == correcta)
+                {
+                    btnR3.ForeColor = Color.Green;
+                    btnR3.BackColor = Color.White;
+                }
+
+                if (btnR4.Text == correcta)
+                {
+                    btnR4.ForeColor = Color.Green;
+                    btnR4.BackColor = Color.White;
+                }
+
+            }
+            if (clsTurno.Turno == 6)
+            {
+                clsTurno.Turno = 1;
+            }
+            else
+            {
+                clsTurno.Turno += 1;
+            }
+            btnContinuar.Visible = true;
+        }
+
+        private void btnR3_Click(object sender, EventArgs e)
+        {
+            if (Respuesta(btnR3.Text))
+            {
+                btnR3.ForeColor = Color.Green;
+                btnR3.BackColor = Color.White;
+                Puntaje();
+                
+            }
+            else
+            {
+
+                if (btnR2.Text == correcta)
+                {
+                    btnR2.ForeColor = Color.Green;
+                    btnR2.BackColor = Color.White;
+                }
+
+                if (btnR1.Text == correcta)
+                {
+                    btnR1.ForeColor = Color.Green;
+                    btnR1.BackColor = Color.White;
+                }
+
+                if (btnR4.Text == correcta)
+                {
+                    btnR4.ForeColor = Color.Green;
+                    btnR4.BackColor = Color.White;
+                }
+            }
+            if (clsTurno.Turno == 6)
+            {
+                clsTurno.Turno = 1;
+            }
+            else
+            {
+                clsTurno.Turno += 1;
+            }
+            btnContinuar.Visible = true;
+        }
+
+        private void btnR4_Click(object sender, EventArgs e)
+        {
+            if (Respuesta(btnR4.Text))
+            {
+                btnR4.ForeColor = Color.Green;
+                btnR4.BackColor = Color.White;
+                Puntaje();
+                
+            }
+            else
+            {
+
+                if (btnR2.Text == correcta)
+                {
+                    btnR2.ForeColor = Color.Green;
+                    btnR2.BackColor = Color.White;
+                }
+
+                if (btnR3.Text == correcta)
+                {
+                    btnR3.ForeColor = Color.Green;
+                    btnR3.BackColor = Color.White;
+                }
+
+                if (btnR1.Text == correcta)
+                {
+                    btnR1.ForeColor = Color.Green;
+                    btnR1.BackColor = Color.White;
+                }
+            }
+            if (clsTurno.Turno == 6)
+            {
+                clsTurno.Turno = 1;
+            }
+            else
+            {
+                clsTurno.Turno += 1;
+            }
+            btnContinuar.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmPuntaje ventana = new frmPuntaje();
+            if (clsTurno.Pregunta == maximo - 1)
+            {
+                MessageBox.Show("Se terminó el juego");
+            }
+            else
+
+            {
+                clsTurno.Pregunta++;
+                ventana.Show();
+                
+                this.Hide();
+            }
         }
     }
 }

@@ -15,8 +15,5 @@ namespace Juego_Hum.Juego
         public int equipo { get; set; }
         public string fondo { get; set; }
         public int puntaje { get; set; }
-        public bool comodin1 { get; set; }
-        public bool comodin2 { get; set; }
-        public bool comodin3 { get; set; }
     }
 }

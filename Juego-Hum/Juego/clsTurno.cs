@@ -8,6 +8,7 @@ namespace Juego_Hum.Juego
 {
     static class clsTurno
     {
+        public static int Pregunta = 1;
         public static int Turno=0;
     }
 }
